@@ -1,5 +1,5 @@
 # GtrendsApi
 
 ```
-$ curl https://www.google.com
+$ curl https://gtrends-api-ss.herokuapp.com/
 ```
