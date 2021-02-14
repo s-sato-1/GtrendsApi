@@ -11,7 +11,6 @@ class APIClient(object):
         """
         """
         trendsgoogle = 'https://trends.google.co.jp/trends/trendingsearches/daily/rss?geo=JP'
-        query = 'https://www.google.com/search?q=%22{}%22'
         int_ranking = 1
         is_dict_err = False
         prev = ''
@@ -45,19 +44,27 @@ class APIClient(object):
             pub_date = arr[3] + '/' + month + '/' + arr[1]
 
             if (prev == ''):
-                list_trends.append('++ 毎日の検索トレンド - 【' + pub_date + '】')
+                list_trends.append('■ 毎日の検索トレンド - ' + pub_date)
             elif (prev == pub_date):
                 int_ranking = int_ranking + 1
             else:
                 int_ranking = 1
-                list_trends.append('++ 毎日の検索トレンド - 【' + pub_date + '】')
+                list_trends.append('■ 毎日の検索トレンド - ' + pub_date)
 
-            list_trends.append(str(int_ranking) + '. ' + title + '    ' + trf + '\r\n' + query.format(title))
+            list_trends.append(str(int_ranking) + '. ' + title + '    ' + trf)
             prev = pub_date
 
-        dict_trends = {}
+        result = ''
+        if is_dict_err:
+            result = '[Err] dict_month do not have terget month.'
+        else:
+            for i in list_trends:
+                if result != '':
+                    result = result + '\r\n' + i
+                else:
+                    result = i
 
-        for i in range(len(list_trends)):
-            dict_trends[i] = list_trends[i]
+        dict_trends = {}
+        dict_trends[0] = result
 
         return dict_trends
