@@ -1,5 +1,11 @@
 # GtrendsApi
 
++ ブラウザ
+
+[https://gtrends-api-ss.herokuapp.com/](https://gtrends-api-ss.herokuapp.com/)
+
++ ターミナル
+
 ```
 $ curl https://gtrends-api-ss.herokuapp.com/
 ```
