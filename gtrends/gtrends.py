@@ -44,12 +44,12 @@ class APIClient(object):
             pub_date = arr[3] + '/' + month + '/' + arr[1]
 
             if (prev == ''):
-                list_trends.append('■ 毎日の検索トレンド - ' + pub_date)
+                list_trends.append('■ {}の検索トレンド'.format(pub_date))
             elif (prev == pub_date):
                 int_ranking = int_ranking + 1
             else:
                 int_ranking = 1
-                list_trends.append('■ 毎日の検索トレンド - ' + pub_date)
+                list_trends.append('■ {}の検索トレンド'.format(pub_date))
 
             list_trends.append(str(int_ranking) + '. ' + title + '    ' + trf)
             prev = pub_date
