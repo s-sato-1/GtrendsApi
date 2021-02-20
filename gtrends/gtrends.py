@@ -33,8 +33,14 @@ class APIClient(object):
 
         list_trends = []
 
-        d = feedparser.parse(trendsgoogle)
-        time.sleep(1)
+        d = ''
+        while True:
+            d = feedparser.parse(trendsgoogle)
+            time.sleep(1)
+            print('[debug] {}'.format(d))
+            if True:
+                break
+
         for entry in d.entries:
             title = entry.title
             trf = entry.ht_approx_traffic
