@@ -1,13 +1,7 @@
-import logging
-import sys
-
 from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 from gtrends.gtrends import APIClient
-
-
-logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
 
 @app.route('/')

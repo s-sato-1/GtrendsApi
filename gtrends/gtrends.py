@@ -1,3 +1,4 @@
+import time
 import feedparser
 
 
@@ -33,6 +34,7 @@ class APIClient(object):
         list_trends = []
 
         d = feedparser.parse(trendsgoogle)
+        time.sleep(10)
         for entry in d.entries:
             title = entry.title
             trf = entry.ht_approx_traffic
