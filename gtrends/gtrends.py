@@ -36,9 +36,7 @@ class APIClient(object):
         d = ''
         while True:
             d = feedparser.parse(trendsgoogle)
-            time.sleep(1)
-            print('[debug] {}'.format(d))
-            if True:
+            if d.bozo != 1:
                 break
 
         for entry in d.entries:
