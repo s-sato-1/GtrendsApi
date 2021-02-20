@@ -38,6 +38,7 @@ class APIClient(object):
             d = feedparser.parse(trendsgoogle)
             if d.bozo != 1:
                 break
+            time.sleep(0.5)
 
         for entry in d.entries:
             title = entry.title
