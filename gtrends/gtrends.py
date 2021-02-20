@@ -56,12 +56,12 @@ class APIClient(object):
             list_trends.append(str(int_ranking) + '. ' + title + '    ' + trf)
             prev = pub_date
 
-        result = ''
+        result = 'tmp'
         if is_dict_err:
             result = '[Err] dict_month do not have terget month.'
         else:
             for i in list_trends:
-                if result != '':
+                if result != 'tmp':
                     result = result + '\r\n' + i
                 else:
                     result = i
