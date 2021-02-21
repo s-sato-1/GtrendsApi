@@ -1,5 +1,7 @@
 # GtrendsApi
 
+## データ取得
+
 + ブラウザ
 
 [https://gtrends-api-ss.herokuapp.com/](https://gtrends-api-ss.herokuapp.com/)
@@ -10,14 +12,12 @@
 $ curl https://gtrends-api-ss.herokuapp.com/
 ```
 
-# Release Note
+## ソース
 
-+ Commit-Id : 0580aaf3a1cf4d3ce89764830962410a4205d4ac
-  - 1要素にまとめた
++ Googleトレンドの急上昇ワード
 
-![](images/20210216.png)
+[https://trends.google.co.jp/trends/trendingsearches/daily?geo=JP](https://trends.google.co.jp/trends/trendingsearches/daily?geo=JP)
 
-+ Commit-Id : 6c25eb825d194ee7c082bf2f3ad199b50e1b8838
-  - 検索用URL付きで返却
++ Googleトレンドの急上昇ワードのRSSフィード
 
-![](images/20210215.png)
+[https://trends.google.co.jp/trends/trendingsearches/daily/rss?geo=JP](https://trends.google.co.jp/trends/trendingsearches/daily/rss?geo=JP)
